@@ -12,6 +12,12 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+        - JetBrainsMono
+
   - type: files
     files:
       - source: system
@@ -30,6 +36,9 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - type: bling
+    install:
+      - 1password      
 
   - type: default-flatpaks
     configurations:
