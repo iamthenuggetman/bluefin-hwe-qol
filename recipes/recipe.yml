@@ -23,7 +23,6 @@ modules:
         - atim/starship
     install:
       packages:
-        - micro
         - starship
     remove:
       packages:
